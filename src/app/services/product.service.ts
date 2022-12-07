@@ -8,8 +8,11 @@ import { environment } from 'src/environments/environment';
 })
 export class ProductService {
   subject = new Subject<any>();
+  cartCount:any = []
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    console.log(this.cartCount)
+  }
 
   getAllProducts() {
     return this.http.get<any>(new URL(environment.api).toString());

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class AllProductsComponent implements OnInit {
   products: any = [];
   clonedProducts: any = [];
   allCategories: any = [];
-  constructor(private productService: ProductService ) {}
+  constructor(private productService: ProductService  ,private toaster : ToastrService) {}
 
   ngOnInit(): void {
     this.getAllProducts();
@@ -45,5 +46,8 @@ export class AllProductsComponent implements OnInit {
         (elem: any) => elem.category == catName
       );
     }
+  }
+  addToCart(product:any){
+ this.productService.cartCount.includes(product) ? this.toaster.error('no') : this.productService.cartCount.push(product)
   }
 }

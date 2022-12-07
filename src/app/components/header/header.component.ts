@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   searchValue?: string;
   form: FormGroup = new FormGroup({});
   constructor(
-    private productService: ProductService,
+    public productService: ProductService,
     private fb: FormBuilder
   ) {}
 
@@ -30,4 +30,7 @@ export class HeaderComponent implements OnInit {
       )
     });
   }
+
+  
+
 }

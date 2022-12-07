@@ -10,6 +10,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { DetailsComponent } from './components/details/details.component';
+import {CarouselModule} from 'primeng/carousel';
+import { CartComponent } from './components/cart/cart.component';
+import { ToastrModule } from 'ngx-toastr';
+
+
+
 
 
 @NgModule({
@@ -18,6 +24,7 @@ import { DetailsComponent } from './components/details/details.component';
     HeaderComponent,
     AllProductsComponent,
     DetailsComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,8 +33,9 @@ import { DetailsComponent } from './components/details/details.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
-
+    RouterModule,
+    CarouselModule,
+    ToastrModule.forRoot()
   ],
   exports:[FormsModule],
   providers: [],
