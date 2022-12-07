@@ -1,0 +1,28 @@
+
+<div class="row container-fluid">
+  <div class="my-2">
+    <label for="">Categories : </label>
+ <select class="form-control"  (change)="filtByCat($event)" >
+   <option value="All" selected>All</option>
+  <option value="{{cat}}" *ngFor="let cat of allCategories">{{cat}}</option>
+
+ </select>
+  </div>
+<div class="d-flex card col-md-2 mt-2 ms-2 mr-2" *ngFor="let product of products ">
+  <div>
+    <img src="{{product?.images[0]}}" class="card-img-top" alt="..." >
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">{{product.title}}</h4>
+    <p class="card-text">Price : {{product.price }} $</p>
+    <p class="card-text"> Discount :{{product.discountPercentage}} %</p>
+    <p class="card-text"> Category : {{product.category}}</p>
+    <p class="card-text">{{product.description}}</p>
+    <!-- <a class="card-text">{{product.thumbnail}}</a> -->
+  </div>
+  <div class="mb-2 d-flex justify-content-center align-item-centre">
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="#" [routerLink]="['/details',product.id]"   class="btn btn-danger ms-1" >View </a>
+    </div>
+</div>
+</div>
