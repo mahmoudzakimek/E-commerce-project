@@ -48,6 +48,6 @@ export class AllProductsComponent implements OnInit {
     }
   }
   addToCart(product:any){
- this.productService.cartCount.includes(product) ? this.toaster.error('no') : this.productService.cartCount.push(product)
+ this.productService.cartCount.includes(product) ? this.toaster.warning('no') : this.productService.cartCount.push(product)
   }
 }

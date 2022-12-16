@@ -12,8 +12,9 @@ import { RouterModule } from '@angular/router';
 import { DetailsComponent } from './components/details/details.component';
 import {CarouselModule} from 'primeng/carousel';
 import { CartComponent } from './components/cart/cart.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
 import { ToastrModule } from 'ngx-toastr';
-
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -25,6 +26,8 @@ import { ToastrModule } from 'ngx-toastr';
     AllProductsComponent,
     DetailsComponent,
     CartComponent,
+    AddProductComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -34,8 +37,8 @@ import { ToastrModule } from 'ngx-toastr';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    CarouselModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    CarouselModule
   ],
   exports:[FormsModule],
   providers: [],

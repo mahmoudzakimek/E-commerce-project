@@ -7,8 +7,8 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  cartsProds : any = []
-  constructor(public productService: ProductService) { }
+  cartsProds  : any = []
+  constructor(public productService: ProductService) {}
 
   ngOnInit(): void {
   }

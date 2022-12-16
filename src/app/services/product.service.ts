@@ -9,6 +9,8 @@ import { environment } from 'src/environments/environment';
 export class ProductService {
   subject = new Subject<any>();
   cartCount:any = []
+  loginUser = ''
+  showAndHide : boolean = true
 
   constructor(private http: HttpClient) {
     console.log(this.cartCount)

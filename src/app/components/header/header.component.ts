@@ -10,6 +10,7 @@ import { ProductService } from 'src/app/services/product.service';
 export class HeaderComponent implements OnInit {
   searchValue?: string;
   form: FormGroup = new FormGroup({});
+  userShowen : boolean= false
   constructor(
     public productService: ProductService,
     private fb: FormBuilder
@@ -31,6 +32,12 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  
-
+  // loginUser(){
+  //   if(this.productService.loginUser) { 
+  //     this.userShowen = true ;
+  //      this.productService.showAndHide= false  
+  //   }else{
+  //      null
+  //   }
+  // }
 }

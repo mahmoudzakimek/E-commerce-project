@@ -25,12 +25,12 @@
           </a>
         </li>
         <li class="nav-item text-center mx-2 mx-lg-1">
-          <a class="nav-link" href="#!">
+          <a routerLink="/add" class="nav-link" href="#!">
             <div>
               <i class="far fa-envelope fa-lg mb-1"></i>
-              <span class="badge rounded-pill badge-notification bg-danger">11</span>
+              <span class="badge rounded-pill badge-notification bg-danger"></span>
             </div>
-            Link
+            Add Product
           </a>
         </li>
         <li class="nav-item text-center mx-2 mx-lg-1">
@@ -42,26 +42,15 @@
             Disabled
           </a>
         </li>
-        <li class="nav-item dropdown text-center mx-2 mx-lg-1">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown"
+        <li class="nav-item  text-center mx-2 mx-lg-1">
+          <a class="nav-link " href="#" role="button" 
             aria-expanded="false">
             <div>
               <i class="far fa-envelope fa-lg mb-1"></i>
-              <span class="badge rounded-pill badge-notification bg-primary">11</span>
             </div>
-            Dropdown
+            {{productService.loginUser}}
           </a>
-          <!-- Dropdown menu -->
-          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-              <hr class="dropdown-divider" />
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </li>
-          </ul>
+         
         </li>
       </ul>
       <!-- Left links -->
@@ -77,13 +66,13 @@
             Cart
           </a>
         </li>
-        <li class="nav-item text-center mx-2 mx-lg-1">
-          <a class="nav-link" href="#!">
+        <li  class="nav-item text-center mx-2 mx-lg-1">
+          <a  routerLink="/login" class="nav-link" href="#!">
             <div>
               <i class="fas fa-globe-americas fa-lg mb-1"></i>
               <span class="badge rounded-pill badge-notification bg-success">11</span>
             </div>
-            News
+            LogIn
           </a>
         </li>
       </ul>

@@ -20,7 +20,8 @@ export class DetailsComponent implements OnInit {
 
   getProdById(){
     this.productService.getProdById(this.id).subscribe(
-      res=>{this.details=res}
+      res=>{this.details=res
+      }
     )
   }
 }
